@@ -8,11 +8,8 @@ import Footer from '../components/Footer';
 import { useOfferings } from '../context/OfferingsContext';
 
 const HomePage = () => {
-  // Use the offerings context instead of hardcoded data
   const offerings = useOfferings();
 
-
-  // Filter functions for different sections
   const getMostMomentum = (offering) => {
     return offering.badges?.includes('momentum');
   };
@@ -22,11 +19,11 @@ const HomePage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="bg-gray-50">
       <Header />
       <HeroSection />
       
-      <main className="max-w-7xl mx-auto">
+      <main className="max-w-6xl mx-auto px-4">
         <InvestmentSections 
           title="Most Momentum" 
           filterFn={getMostMomentum} 
